@@ -1,6 +1,6 @@
 const EventEmitter = require('events');
 const emitter = new EventEmitter();
-emitter.on('start', () => console.log('Привет, сейчас ты проверяешь задание 3:'));
+emitter.on('start', () => console.log("Hi! You are here: Task 3.\nFiles' info is below:\n"));
 emitter.emit('start');
 
 

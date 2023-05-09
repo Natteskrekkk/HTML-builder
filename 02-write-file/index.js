@@ -3,7 +3,7 @@ const path = require('path');
 const { stdin, stdout, stderr } = process;
 const EventEmitter = require('events');
 const emitter = new EventEmitter();
-emitter.on('start', () => console.log('Привет, сейчас ты проверяешь задание 2. Введи текст ниже:'));
+emitter.on('start', () => console.log('Hi! You are here: Task 2.\nWrite some text below:\n'));
 emitter.emit('start');
 
 fs.writeFile(path.join(__dirname, "write.txt"), "", function (err, data) {

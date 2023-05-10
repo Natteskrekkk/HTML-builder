@@ -12,7 +12,7 @@ fs.mkdir(destinationPath, { recursive: true }, (err) => {
     if (err) throw err;
 });
 
-fs.readdir(destinationPath, function (err, files) { // delete previous files
+fs.readdir(destinationPath, (err, files) => { // delete previous files
     if (err) {
         return console.log('Unable to scan directory: ' + err);
     }
@@ -21,7 +21,7 @@ fs.readdir(destinationPath, function (err, files) { // delete previous files
             if (err) throw err;
         });
     });
-    fs.readdir(sourcePath, function (err, files) { // create empty files in new derictory
+    fs.readdir(sourcePath, (err, files) => { // create empty files in new derictory
         if (err) {
             return console.log('Unable to scan directory: ' + err);
         }

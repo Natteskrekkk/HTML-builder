@@ -50,7 +50,7 @@ function createHTML() {
             let file = files[i];
             const readableStream = fs.createReadStream(path.join(componentsPath, file), "utf-8");
             readableStream.on('data', (chunk) => {
-                components["{{" + path.parse(file).name + "}}"] = chunk + "\n";
+                components["{{" + path.parse(file).name + "}}"] = chunk;
                 if (i === files.length - 1) {
 
                     const readableStream = fs.createReadStream(templateHTML, "utf-8");
